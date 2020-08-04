@@ -1,6 +1,5 @@
 import org.springframework.cloud.contract.spec.ContractDsl.Companion.contract
 import org.springframework.cloud.contract.spec.withQueryParameters
-import java.awt.HeadlessException
 
 contract {
     name = "Sample contract"

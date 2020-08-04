@@ -38,6 +38,11 @@
             <artifactId>spring-cloud-starter-contract-verifier</artifactId>
             <version>2.2.3.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-contract-spec-kotlin</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -52,9 +57,17 @@
                 <version>2.2.3.RELEASE</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <contractsDirectory>src/test/kotlin/contracts</contractsDirectory>
                     <baseClassForTests>com.daisuzz.samplespringcloudcontractserver.SampleUserTests</baseClassForTests>
                     <testFramework>JUNIT5</testFramework>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-contract-spec-kotlin</artifactId>
+                        <version>2.2.3.RELEASE</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
