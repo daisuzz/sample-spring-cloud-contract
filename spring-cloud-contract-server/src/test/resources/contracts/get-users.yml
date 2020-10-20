@@ -1,6 +1,20 @@
 description: Sample contract
 name: get users
 request:
+  url: /users/1
+  method: GET
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    id: 1
+    lastName: Yamada
+    firstName: Taro
+    age: 20
+---
+name: get user
+request:
   url: /users
   method: GET
 response:
