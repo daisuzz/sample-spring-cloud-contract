@@ -1,0 +1,18 @@
+description: Sample contract
+name: get users
+request:
+  url: /users
+  method: GET
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    - id: 1
+      lastName: Yamada
+      firstName: Taro
+      age: 20
+    - id: 2
+      lastName: Suzuki
+      firstName: Ichiro
+      age: 30

@@ -1,13 +1,14 @@
 description: Sample contract
-name: userContract
+name: get role
 request:
-  url: /user
+  url: /roles/1
   method: GET
 response:
   status: 200
   headers:
     Content-Type: application/json
   body:
-    lastName: Yamada
-    firstName: Taro
-    age: 20
+    id: 1
+    name: admin
+    userList:
+      - 1
