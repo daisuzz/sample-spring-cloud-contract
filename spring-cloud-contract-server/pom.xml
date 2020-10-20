@@ -59,7 +59,7 @@
                 <configuration>
                 <!-- if you write contract with Java or Kotlin dsl, enable following -->
                 <!--    <contractsDirectory>src/test/kotlin/contracts</contractsDirectory> -->
-                    <baseClassForTests>com.daisuzz.samplespringcloudcontractserver.SampleUserTests</baseClassForTests>
+                    <baseClassForTests>com.daisuzz.samplespringcloudcontractserver.SampleContractTests</baseClassForTests>
                     <testFramework>JUNIT5</testFramework>
                 </configuration>
                 <!-- if you write contract with kotlin dsl, enable following -->

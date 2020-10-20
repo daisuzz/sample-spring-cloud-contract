@@ -1,0 +1,18 @@
+description: Sample contract
+name: get roles
+request:
+  url: /roles
+  method: GET
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    - id: 1
+      name: admin
+      userList:
+        - 1
+    - id: 2
+      name: operator
+      userList:
+        - 2
