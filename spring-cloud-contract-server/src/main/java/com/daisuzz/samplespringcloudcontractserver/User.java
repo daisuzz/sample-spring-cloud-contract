@@ -2,16 +2,27 @@ package com.daisuzz.samplespringcloudcontractserver;
 
 public class User {
 
+    String id;
+
     String lastName;
 
     String firstName;
 
     Integer age;
 
-    User(String lastName, String firstName, Integer age) {
+    User(String id, String lastName, String firstName, Integer age) {
+        this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.age = age;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
     }
 
     public String getLastName() {
