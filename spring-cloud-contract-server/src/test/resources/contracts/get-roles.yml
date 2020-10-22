@@ -1,7 +1,7 @@
 description: Sample contract
 name: get role
 request:
-  url: /roles/1
+  urlPath: /roles/1
   method: GET
 response:
   status: 200
@@ -15,7 +15,7 @@ response:
 ---
 name: get roles
 request:
-  url: /roles
+  urlPath: /roles
   method: GET
 response:
   status: 200
