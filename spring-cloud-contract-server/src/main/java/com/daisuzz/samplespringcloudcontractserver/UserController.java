@@ -1,8 +1,7 @@
 package com.daisuzz.samplespringcloudcontractserver;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +18,19 @@ public class UserController {
     private List<User> getUsers() {
         return List.of(new User("1", "Yamada", "Taro", 20),
                 new User("2", "Suzuki", "Ichiro", 30));
+    }
+
+    @PostMapping("users")
+    @ResponseStatus(HttpStatus.CREATED)
+    private String createUser(@RequestBody UserCreateRequest userCreateRequest) {
+
+        User user = new User(
+                userCreateRequest.id,
+                userCreateRequest.firstName,
+                userCreateRequest.lastName,
+                userCreateRequest.age
+        );
+
+        return user.id;
     }
 }

@@ -30,3 +30,20 @@ response:
       lastName: Suzuki
       firstName: Ichiro
       age: 30
+---
+name: create user
+request:
+  url: /users
+  method: POST
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+  body:
+    id: 3
+    lastName: Tanaka
+    firstName: Jiro
+    age: 40
+response:
+  status: 201
+  headers:
+    Content-Type: application/json
