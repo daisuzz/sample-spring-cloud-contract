@@ -1,5 +1,8 @@
 package com.daisuzz.samplespringcloudcontractserver;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 public class UserCreateRequest implements Serializable {
@@ -8,10 +11,14 @@ public class UserCreateRequest implements Serializable {
 
     String id;
 
+    @Pattern(regexp = "[a-zA-Z]*")
     String lastName;
 
+    @Pattern(regexp = "[a-zA-Z]*")
     String firstName;
 
+    @Min(0)
+    @Max(100)
     Integer age;
 
     UserCreateRequest(String id, String lastName, String firstName, Integer age) {

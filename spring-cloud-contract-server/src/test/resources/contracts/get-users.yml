@@ -43,6 +43,14 @@ request:
     lastName: Tanaka
     firstName: Jiro
     age: 40
+  matchers:
+    body:
+      - path: $.lastName
+        type: by_regex
+        value: "[a-zA-Z]*"
+      - path: $.firstName
+        type: by_regex
+        value: "[a-zA-Z]*"
 response:
   status: 201
   headers:

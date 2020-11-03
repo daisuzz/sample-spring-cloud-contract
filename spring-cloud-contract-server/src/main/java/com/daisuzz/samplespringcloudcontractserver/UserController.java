@@ -3,6 +3,7 @@ package com.daisuzz.samplespringcloudcontractserver;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class UserController {
 
     @PostMapping("users")
     @ResponseStatus(HttpStatus.CREATED)
-    private String createUser(@RequestBody UserCreateRequest userCreateRequest) {
+    private String createUser(@RequestBody @Valid UserCreateRequest userCreateRequest) {
 
         User user = new User(
                 userCreateRequest.id,
